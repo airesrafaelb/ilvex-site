@@ -2700,3 +2700,158 @@ h1 > span {
     margin: 16px auto 0;
   }
 }
+
+/* Ajustes finais de responsividade para o deploy */
+.services-laptop,
+.contact-laptop {
+  overflow: visible;
+}
+
+.services-laptop__screen,
+.contact-laptop__screen {
+  z-index: 1;
+}
+
+.services-laptop::after,
+.contact-laptop::after {
+  z-index: 0;
+}
+
+@media (min-width: 1041px) {
+  .services-showcase,
+  .contact-visual {
+    min-height: 760px;
+    align-content: center;
+  }
+
+  .services-laptop,
+  .contact-laptop {
+    width: min(92%, 820px);
+    aspect-ratio: 1.48 / 1;
+  }
+
+  .services-laptop__screen {
+    padding: 30px;
+  }
+
+  .screen-metrics {
+    margin-top: 18px;
+  }
+
+  .screen-metrics div {
+    min-height: 88px;
+    padding: 12px;
+  }
+
+  .services-showcase {
+    row-gap: 68px;
+  }
+
+  .services-laptop {
+    margin-bottom: 54px;
+  }
+
+  .services-laptop::after {
+    bottom: -26%;
+    height: 16%;
+  }
+}
+
+@media (min-width: 1041px) and (max-width: 1440px) {
+  .services-section__content {
+    grid-template-columns: minmax(430px, 0.9fr) minmax(560px, 1.1fr);
+    gap: clamp(24px, 3vw, 46px);
+  }
+
+  .service-row {
+    grid-template-columns: 42px minmax(140px, 0.8fr) minmax(160px, 1.2fr);
+    gap: 14px;
+    padding: 12px;
+  }
+
+  .service-row h3 {
+    font-size: 15px;
+  }
+
+  .services-stats div {
+    padding: 14px 18px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .services-laptop,
+  .contact-laptop {
+    aspect-ratio: 1.34 / 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .services-section__content,
+  .contact-section__content {
+    gap: 34px;
+  }
+
+  .services-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .services-laptop,
+  .contact-laptop {
+    aspect-ratio: auto;
+    min-height: 330px;
+    opacity: 0.9;
+  }
+
+  .services-laptop__screen,
+  .contact-laptop__screen {
+    inset: 7%;
+    padding: 28px 24px;
+  }
+
+  .services-laptop__screen h3,
+  .contact-laptop__screen h3 {
+    max-width: 100%;
+    margin-top: 34px;
+    font-size: 26px;
+    line-height: 1.18;
+  }
+
+  .services-laptop__screen p,
+  .contact-laptop__screen p {
+    max-width: 100%;
+    font-size: 13px;
+  }
+
+  .floating-service {
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .floating-service strong {
+    font-size: 18px;
+  }
+
+  .floating-service p {
+    max-width: 280px;
+    font-size: 14px;
+  }
+
+  .contact-card {
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .contact-card strong {
+    font-size: 18px;
+  }
+
+  .contact-card p,
+  .contact-card b {
+    font-size: 14px;
+  }
+
+  .contact-card button {
+    min-height: 42px;
+    font-size: 12px;
+  }
+}
