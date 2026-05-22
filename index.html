@@ -458,37 +458,64 @@
           </div>
 
           <div class="portfolio-filters" aria-label="Filtros de portfólio">
-            <button class="is-active">Todos <span></span></button>
-            <button>Websites</button>
-            <button>Identidade Visual</button>
-            <button>Landing Pages</button>
-            <button>Campanhas</button>
+            <button class="is-active" type="button" data-filter="all">Todos <span></span></button>
+            <button type="button" data-filter="website">Websites</button>
+            <button type="button" data-filter="identidade-visual">Identidade Visual</button>
+            <button type="button" data-filter="landing-page">Landing Pages</button>
+            <button type="button" data-filter="campanha">Campanhas</button>
           </div>
 
           <div class="portfolio-grid" aria-label="Projetos em destaque">
-            <article class="project-card project-card--large">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M4 6.5h16v11H4zM8 14l3-3 2.5 2.5L16 10l4 4M16 8h.1" />
-              </svg>
-            </article>
+            <a
+              class="project-card project-card--large"
+              href="https://keen-queijadas-3361a3.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-category="website"
+            >
+              <img src="assets/portfolio-odontologico.png" alt="Preview do projeto Site Odontológico Premium" />
+              <span class="project-card__shade"></span>
+              <div class="project-card__content">
+                <span class="project-card__category">Website</span>
+                <h3>Site Odontológico Premium</h3>
+                <p>Site moderno para clínica odontológica com foco em confiança, autoridade e agendamento de consultas.</p>
+                <strong>Ver projeto</strong>
+              </div>
+            </a>
 
-            <article class="project-card">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M4 6.5h16v11H4zM8 14l3-3 2.5 2.5L16 10l4 4M16 8h.1" />
-              </svg>
-            </article>
+            <a
+              class="project-card"
+              href="https://radiant-squirrel-ad0958.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-category="website"
+            >
+              <img src="assets/portfolio-delivra.png" alt="Preview do projeto Delivra" />
+              <span class="project-card__shade"></span>
+              <div class="project-card__content">
+                <span class="project-card__category">Website</span>
+                <h3>Delivra</h3>
+                <p>Site moderno para delivery e cardápio digital, com foco em pedidos rápidos e finalização pelo WhatsApp.</p>
+                <strong>Ver projeto</strong>
+              </div>
+            </a>
 
-            <article class="project-card">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M4 6.5h16v11H4zM8 14l3-3 2.5 2.5L16 10l4 4M16 8h.1" />
-              </svg>
-            </article>
-
-            <article class="project-card project-card--wide">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M4 6.5h16v11H4zM8 14l3-3 2.5 2.5L16 10l4 4M16 8h.1" />
-              </svg>
-            </article>
+            <a
+              class="project-card"
+              href="https://delicate-salamander-011678.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-category="ecommerce"
+            >
+              <img src="assets/portfolio-petlux.png" alt="Preview do projeto Pet Shop PetLux" />
+              <span class="project-card__shade"></span>
+              <div class="project-card__content">
+                <span class="project-card__category">E-commerce</span>
+                <h3>Pet Shop PetLux</h3>
+                <p>Site para pet shop com produtos, serviços, agendamento e foco em vendas.</p>
+                <strong>Ver projeto</strong>
+              </div>
+            </a>
           </div>
 
           <a class="portfolio-link" href="#contato">
@@ -670,5 +697,6 @@
         </div>
       </section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
